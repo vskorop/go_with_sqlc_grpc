@@ -1,0 +1,11 @@
+version: "2"
+sql:
+  - engine: "postgresql"
+    name: 'db'
+    queries: "./db/query"
+    schema: "./db/migration"
+    database:
+      uri: "postgresql://root:pedro1@localhost:5432/simple_bank"
+    gen:
+      go:
+        out: "db/sqlc"
